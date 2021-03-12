@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-</head>
-<body>
-  <div id="app">正在加载中，请稍等...</div>
-  <script>
-    window.$docsify = {
-      name: '',
-      repo: ''
-    }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css"
+    />
+  </head>
+  <body>
+    <div id="app">正在加载中，请稍等...</div>
+    <script>
+      window.$docsify = {
+        name: "KeaneLai",
+        repo: "https://github.com/keaneLai",
+        homepage: "index.md",
+        coverpage: false, // 'coverPage.md',
+        loadSidebar: "sideBar.md",
+        loadNavbar: "navBar.md",
+        maxLevel: 4,
+        subMaxLevel: 2,
+        auto2top: true, // 切换页面后是否自动跳转到页面顶部
+        search: "auto", // 默认值
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <!-- <script>
+      const gitalk = new Gitalk({
+        clientID: "Github Application Client ID",
+        clientSecret: "Github Application Client Secret",
+        repo: "Github repo",
+        owner: "Github repo owner",
+        admin: [
+          "Github repo collaborators, only these guys can initialize github issues",
+        ],
+        // facebook-like distraction free mode
+        distractionFreeMode: false,
+      });
+    </script> -->
+  </body>
 </html>

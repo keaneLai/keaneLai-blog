@@ -1,3 +1,0 @@
-# keaneLai
-
-> An awesome project.
