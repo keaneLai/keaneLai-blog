@@ -3,4 +3,5 @@
   - [React](/issue/react/create)
     - [Hook](/issue/react/hook)
   - Vue
+    - [双向绑定底层原理](/issue/vue/double)
     - [vuex](/issue/react/hook)
