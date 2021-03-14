@@ -5,3 +5,5 @@
   - Vue
     - [双向绑定底层原理](/issue/vue/double)
     - [vuex](/issue/react/hook)
+- 笔记
+  - [Object.defineProperty](note/defineProperty)
