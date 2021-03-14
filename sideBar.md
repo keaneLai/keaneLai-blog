@@ -7,3 +7,4 @@
     - [vuex](/issue/react/hook)
 - 笔记
   - [Object.defineProperty](note/defineProperty)
+  - [JS常用方法](note/jsFuntion)
