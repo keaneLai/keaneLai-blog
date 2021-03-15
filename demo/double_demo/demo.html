@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{title}}</h1>
+    <h2>{{name}}</h2>
+    <input v-model="name">
+    <button v-on:click="clickMe">click me!</button>
+  </div>
+</body>
+<script src="observer.js"></script>
+<script src="watcher.js"></script>
+<script src="compile.js"></script>
+<script src="index.js"></script>
+<script>
+  // var el = document.querySelector('#app');
+  // var selfVue  = new SelfVue({  // 使用new对SelfVue进行构造函数
+  //   name: 'hello world'
+  //   }, el, 'name');
+  
+  // window.setTimeout(function() {
+  //   console.log("name值改变了");
+  //   console.log(selfVue);
+  //   selfVue.name = 'kean';
+  // },2000);
+
+  var selfVue  = new SelfVue({
+    el:"#app",
+    data: {
+      title: 'hello world',
+      name: 'kean',
+      price:100
+    },
+    methods: {
+      clickMe: function () {
+        this.title = 'you are very good';
+      }
+    },
+    mounted: function () {
+      window.setTimeout(() => {
+        this.title = '你好';
+      }, 1000);
+    }
+  });
+</script>
+</html>

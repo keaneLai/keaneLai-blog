@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <table border="1">
+      <td>name</td>
+      <td>age</td>
+      <td>sex</td>
+      <td>grade</td>
+      <tr v-for="item in tableData">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.sex}}</td>
+        <td>{{item.grade}}</td>
+      </tr>
+    </table>
+    <button @click="updateData">update</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el:"#app",
+      data:{
+        tableData:[
+          {name:"kean1",age:'18',sex:'man'},
+          {name:"amy",age:'23',sex:'woman'},
+          {name:"john",age:'34',sex:'man'}
+        ],
+        newData:[
+          {name:"john",grade:'34'},
+          {name:"kean1",grade:'200'},
+          {name:"amy",grade:'23'}
+        ]
+      },
+      methods:{
+        updateData() {
+          var temp1 = this.tableData;
+          var temp2 = this.newData;
+          for(val of temp1) {
+            for(vals of temp2) {
+              if(val.name == vals.name) {
+                Vue.set(val,'grade',vals.grade);
+              }
+            }
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>

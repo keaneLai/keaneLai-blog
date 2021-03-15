@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item,index) in tableData"><input type="text" v-model="item.quantity">&nbsp;&nbsp;&nbsp;{{item.name}}&nbsp;&nbsp;&nbsp;
+        <button @click="addAction(index)">Add</button>
+        <span v-if="item.quantity == 0">OUT OF STOCK</span>
+      </li>
+    </ul>
+    Total Inventory:{{countsum}}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el:"#app",
+      data:{
+        tableData:[
+          {id:1,quantity:1,name:'Conpass'},
+          {id:2,quantity:0,name:'Jacket'},
+          {id:3,quantity:5,name:'Hiking Socks'},
+          {id:4,quantity:2,name:'Kean'}
+        ]
+      },
+      methods:{
+        addAction(index) {
+          this.tableData[index].quantity++;
+        }
+      },
+      computed:{
+        countsum(){
+          let countsum = 0;
+          for(val of this.tableData) {
+            if(!val.quantity){
+              countsum = countsum
+            }else{
+              countsum += parseInt(val.quantity);
+            }
+          }
+          return countsum
+        }
+      }
+    })
+  </script>
+</body>
+</html>
