@@ -1,0 +1,25 @@
+{
+  "name": "keanelai",
+  "version": "1.0.0",
+  "description": "keaneLai's blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://keaneLai:yibantou123@github.com/keaneLai/keaneLai-blog.git"
+  },
+  "keywords": [
+    "keaneLai"
+  ],
+  "author": "keaneLai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keaneLai/keaneLai-blog/issues"
+  },
+  "homepage": "https://github.com/keaneLai/keaneLai-blog#readme",
+  "dependencies": {
+    "koa": "^2.13.1"
+  }
+}
