@@ -31,3 +31,13 @@
   ```
     git remote update origin --prune
   ```
+
+  - 将当前更改进行存储
+  ```
+    git stash
+  ```
+
+  - 将之前存储的更改进行释放
+  ```
+    git stash pop
+  ```
