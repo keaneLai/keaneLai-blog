@@ -41,3 +41,8 @@
   ```
     git stash pop
   ```
+
+  - 解除当前的本地分支与远程分支的关联
+  ```
+    git branch --unset-upstream 
+  ```
