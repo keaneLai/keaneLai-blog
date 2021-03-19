@@ -39,12 +39,12 @@ git stash
 
 - 可以让本地分支与对应的远程分支建立起映射，这样可以直接git pull/push
 ```
-  git checkout -b dev(本地分支名称) origin/dev(远程分支名称)
+  git branch --set-upstream-to origin/dev(远程分支名称) dev(本地分支名称)
 ```
 
 - 解除当前的本地分支与远程分支的关联
 ```
-  git branch --unset-upstream 
+  git branch --unset-upstream
 ```
 
 - 查看分支与远程分支关联的所有列表
@@ -54,4 +54,9 @@ git stash
 - 查看所有分支（包含本地分支和远程分支）列表
 ```
   git branch -a
+```
+
+- 查看当前分支的所有commit信息（美化过的单行commit）
+```
+  git log --pretty=oneline
 ```
