@@ -29,3 +29,21 @@ console.log(person2.name) // Kevin
   ```
 
 ## constructor
+
+**每个原型都有一个 constructor 属性指向关联的构造函数**  
+首先是 constructor 属性，我们看个例子：
+
+```
+function Person() {
+
+}
+var personObj = new Person();
+console.log(Person === Person.prototype.constructor); // true
+console.log(personObj.constructor === Person); // true
+```
+
+> 当获取 personObj.constructor 时，其实 personObj 中并没有 constructor 属性,当不能读取到 constructor 属性时，会从 personObj 的原型也就是 Person.prototype 中读取，正好原型中有该属性，所以：
+
+```
+personObj.constructor === Person.prototype.constructor
+```
