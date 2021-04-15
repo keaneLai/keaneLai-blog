@@ -10,3 +10,5 @@
   - [JS 常用方法](note/jsFuntion)
   - [Git 的常用命令](note/git)
   - [原型链](note/chain)
+  - [window 与 Linux 系统的各种功能不同](note/compare)
+  - [Eslint 的各种功能](note/eslint)

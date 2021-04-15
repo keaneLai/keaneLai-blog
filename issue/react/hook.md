@@ -1,9 +1,10 @@
 # React 的 Hook 使用
 
 1. 为什么要用 Hook?
-  - 针对于不使用 hook 的情况下，除了 Class 类组件，能够存储组件状态，而 function 函数组件无法存储组件状态，只能通过外部传入的 props 来控制 UI 的变化，  
+
+- 针对于不使用 hook 的情况下，除了 Class 类组件，能够存储组件状态，而 function 函数组件无法存储组件状态，只能通过外部传入的 props 来控制 UI 的变化，  
   所以为了能够统一的实现组件状态的修改，我们可以选择引入 Hook，Hook 是 React 引入的新特性；个人理解其用处主要在于
-    > **注意**: 可忽略生命周期函数的编写，函数组件可实现公共状态的管理，更加有效的完成副作用的实现。
+  > **注意**: 可忽略生命周期函数的编写，函数组件可实现公共状态的管理，更加有效的完成副作用的实现。
 
 在项目当中，最常用的 hook 就是以下几个：
 
@@ -52,7 +53,8 @@
 
   > 常见栗子：需要在跳转到某一个页面时，当前页面的输入框需要自动聚焦，那么在这时候可以使用这个 useRef 从而实现自动聚焦。
 
-- useContext: 在子组件中可以获得最外层传递的变量，而useContext(`context`)，参数是通过createContext函数全局创建的上下文常量
+- useContext: 在子组件中可以获得最外层传递的变量，而 useContext(`context`)，参数是通过 createContext 函数全局创建的上下文常量
+
 ```
 // 创建一个 context
 const Context = createContext(0)
@@ -89,7 +91,7 @@ function App () {
   const [ count, setCount ] = useState(0)
   return (
     <div>
-      点击次数: { count } 
+      点击次数: { count }
       <button onClick={() => { setCount(count + 1)}}>点我</button>
       <Context.Provider value={count}>
         <Item1></Item1>
@@ -99,4 +101,10 @@ function App () {
     </div>
     )
 }
+```
+
+- useSelector: 共享状态,从 Redux 的 store 中提取数据（state）
+
+```
+const num=useSelector(state=>state.num)
 ```
