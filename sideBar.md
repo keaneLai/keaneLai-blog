@@ -10,3 +10,4 @@
   - [JS 常用方法](note/jsFuntion)
   - [Git 的常用命令](note/git)
   - [原型链](note/chain)
+  - [iPhoneX 的 H5 适配](note/adapt)
