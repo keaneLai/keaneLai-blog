@@ -108,3 +108,35 @@ function App () {
 ```
 const num=useSelector(state=>state.num)
 ```
+
+- useMemo: 用于将在某变量发生变化而导致组件重新渲染时不应该随之发生变化的变量
+
+```
+父组件Parent：
+const [name,setName] = useState();
+const [content,setContent] = useState();
+return (
+  <>
+    <button onClick={() => setName('kean')}></button>
+    <button onClick={() => setContent('content balabala')}></button>
+    <Child name={name} content={content}>
+  </>
+);
+
+子组件Child：
+const finalName = useMemo(() => {
+  const tempStr = `我的名字是` + this.props.name;
+  return tempStr;
+}, [this.props.name]);
+return (
+  <>
+    <span>{finalName}</span>
+    <span>{this.props.content}</span>
+  </>
+);
+
+```
+
+> 当点击内容的时候，子组件 Child 所接受的 props 中的 content 就会发生改变，而子组件则会随之重新渲染  
+> 但是我们不希望子组件中的名称也随之更新，所以我们需要使用 useMemo 来封装 name,这样就只有当依赖项发生改变
+> 才会重新渲染。
