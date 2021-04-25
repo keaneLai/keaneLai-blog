@@ -13,3 +13,4 @@
   - [iPhoneX 的 H5 适配](note/adapt)
   - [window 与 Linux 系统的各种功能不同](note/compare)
   - [Eslint 的各种功能](note/eslint)
+- [面试常见问题](interview/faq)
