@@ -4,7 +4,7 @@
     - [Hook](/issue/react/hook)
   - Vue
     - [双向绑定底层原理](/issue/vue/double)
-    - [vuex](/issue/react/hook)
+    - [vuex](/issue/vue/note)
 - 笔记
   - [Object.defineProperty](note/defineProperty)
   - [JS 常用方法](note/jsFuntion)
