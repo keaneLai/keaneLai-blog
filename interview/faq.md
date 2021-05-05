@@ -467,4 +467,123 @@
 177. 回溯算法
 178. 双指针操作
 179. 哈希表
-180. 动态规划（一般为加分题）
+180. 动态规划
+181. webpack 中 chunkHash 与 contentHash 区别
+182. 写过 webpack 的 loader 和 plugin 么；
+183. webpack 处理 image 是用哪个 loader，限制成 image 大小的是
+184. webpack 将 css 合并成一个
+185. webpack 的摇树对 commonjs 和 es6 module 都生效么，原理是；
+186. 实现一下「模版字符串」功能；
+187. 实现一下 Promise.all (Promise 不用写)；
+188. 怎么实现响应式布局的；
+189. css flex 的各个属性值；
+190. css 动画 animation 各个时间值含义；
+191. css 如何实现让一个元素旋转并横向移动，如果只用一个 css 属性；
+192. less 与 sass 区别，技术选型时如何取舍；
+193. ES6 symbol 如何使用以及使用场景；
+194. ES6 Proxy 如何使用以及使用场景，说说 Reflect；
+195. generator 有什么应用场景;
+196. async await 如何实现的；
+197. git reset 与 revert 区别，revert 多个 mr 改如何处理；
+198. git 如何撤回 add 后的内容；
+199. http2 与 http1.1 区别，了解 http3 么，说说；
+200. tcp 与 udp 的区别；
+201. 手写在 给定的 n 个数中随机取出 m 个数，要求等概率；
+202. 手写一下防抖节流函数；
+203. 设计实现一个「星级评分」组件；
+204. 说说 http 缓存；
+205. call、apply、bind 三者的区别，如何实现 bind；
+206. 请实现 find 函数，使下列的代码调用正确。
+
+```
+约定：
+title 数据类型为 String
+userId 为主键，数据类型为 Number
+var data = [
+{userId: 8, title: 'title1'},
+{userId: 11, title: 'other'},
+{userId: 15, title: null},
+{userId: 19, title: 'title2'}
+];
+var find = function(origin) {
+your code are here...
+}
+查找 data 中，符合条件的数据，并进行排序
+var result = find(data).where({
+'title': /\d$/
+}).orderBy('userId', 'desc');
+
+console.log(result);
+=> [{ userId: 19, title: 'title2'}, { userId: 8, title: 'title1' }];
+```
+
+207. js 有哪些基本类型，说说 typeof 与 instanceof；
+208. 说说 new 操作符；
+209. 什么是 event loop；
+210. Promise 的用法？了解 allSettled 方法么，怎么实现？
+211. 说说闭包；
+212. ES5 实现继承的方法;
+213. 说说跨域；
+214. commonJS 与 ES6 模块化区别；
+215. webpack 了解么？loader、plugin 分别是干嘛的？如何实现一个 loader？
+216. webpack 如何优化打包速度；
+217. 说一下 css 盒模型，border-box 和 content-box 区别；
+218. 说说 BFC；
+219. 移动端响应式布局怎么实现的；
+220. 说一说 flex 布局，有了解 Grid 么；
+221. 有兼容 retina 屏幕的经历吗？如何在移动端实现 1 px 的线;
+222. 说一下 react 组件的生命周期；
+223. react 组件如何做性能优化，说说 pureComponent；
+224. 调用 setState 之后发生了什么;
+225. 了解 fiber 么？解决了什么问题？具体原理是；
+226. 有用过 hooks 么？怎么看待 hooks？它的原理是；
+227. 了解过 react 最新的一些动态么？time slice 、suspense、server component
+228. 了解最近一些新技术么，webpack5 做了哪些新突破；
+229. 为什么 vite、snowpack 可以比 webpack 快那么多？具体原理是；
+230. 什么是 CSRF 攻击，怎么预防；
+231. 为什么说用 css 实现动画比 js 动画性能好；
+232. 什么是 合成层；
+233. http2 与 http1.1 区别；
+234. 说一说 http 缓存；
+235. http 状态码；
+236. 路由器和交换机的区别；😨
+237. 实现斐波纳切数，递归和非递归的时间复杂度分别是多少
+238. 手写大数相加方法；
+239. 实现一个方块的拖拽；
+240. 问了一些项目的问题，以及相关技术细节；
+241. 从一个 URL 输入到页面渲染，经历了哪些过程，尽可能的详细；
+242. tcp 握手 回收过程，了解泛洪攻击么；
+243. 说说 event loop（并出了一道题，写输出顺序）；
+244. SSR 怎么做的，怎么保证同构？server 端的数据都 renderToSting 消费了，为什么还要给到 client 端；
+245. js 的严格模式；
+246. 说说 Iterator 的使用；
+247. 说一说快速排序的过程；
+248. node 如何捕捉错误，内存泄漏怎么排查；
+249. 为什么要做 SSR；
+250. E2E 测试怎么做的，怎么保证测试覆盖率和准确性；
+251. 如何合理分配 node 服务资源；
+252. hybrid 通信原理；
+253. 如何看待小程序，它的技术原理是；
+254. 设计一个协同文档的技术流程；
+255. 离线包怎么做的，现在公司的 app 提供了哪些特殊能力；
+256. 质量保障平台如何做的，项目中单元测试怎么做的，为什么要有 E2E 测试；
+257. 希尔排序，堆排，快排；
+258. this 指向问题，说出输出内容；
+259. 如何设计一个组件库；
+260. 用过 TypeScript 么，了解哪些新特性；
+261. 说说 React Fiber...;
+262. 为什么 Fiber 双向链表的结构可以解决递归慢的问题；
+263. 了解设计模式么，说说单例模式的优缺点;
+264. 职业规划；
+265. 二维数组中的查找；
+266. 从先序遍历还原二叉树
+267. 手写一个版本比较函数；
+268. 实现一下 cache request（请求过的数据不再请求）
+269. 防抖节流；
+270. 手写 Promise 及相关 api 实现；
+271. 实现 bind、apply、call；
+272. request cache；
+273. 实现模版字符串；
+274. es6 class 转成 es5 ；
+275. 实现 Array flat 等相关 API；
+276. 实现一个版本比较函数；...
